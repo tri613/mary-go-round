@@ -1,5 +1,5 @@
 /*======================================
-    Mary-go-round v1.0.0
+    slide-it v1.0.0
     Simple image slider with pure Javascript, no dependency needed.
     @Create 20160719
     @Author Trina Lu
@@ -7,7 +7,7 @@
 
 (function(){
 
-    var slide = function(_wrapper,_slideWidth,_showNum,_options){
+    var slideit = function(_wrapper,_slideWidth,_showNum,_options){
         _options = _options || {margin:0,slideAll:false};
         _options.margin = _options.margin || 0;
         _options.slideAll = _options.slideAll || false;
