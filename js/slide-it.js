@@ -53,6 +53,6 @@
         }
     };
 
-    window.slide = slide;
+    window.slideit = slideit;
 
 }());
