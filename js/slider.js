@@ -1,3 +1,10 @@
+/*======================================
+    Mary-go-round v1.0.0
+    Simple image slider with pure Javascript, no dependency needed.
+    @Create 20160719
+    @Author Trina Lu
+  ======================================*/
+
 (function(){
 
     var slide = function(_wrapper,_slideWidth,_showNum,_options){
@@ -29,7 +36,6 @@
                 arrows[i].addEventListener('click',onSlide);
             }
         }();
-
 
         var group = 0;
         function onSlide(e){

@@ -25,6 +25,7 @@ li {
 .slider_wrapper .arrow {
   height: auto;
   cursor: pointer;
+  width: 50px;
 }
 
 .slider_wrapper .arrow.next {
@@ -37,7 +38,6 @@ li {
 .slider_wrapper .arrow svg {
   fill: #03A9F4;
   fill-opacity: 0.5;
-  width: 20px;
 }
 
 .slider_wrapper .arrow svg:hover {
@@ -54,7 +54,7 @@ li {
   -webkit-transition: all 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
   white-space: nowrap;
   letter-spacing: -4px;
-  word-spacing: -4px;
+  /*word-spacing: -4px;*/
   font-size: 0;
   position: absolute;
 }
