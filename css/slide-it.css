@@ -1,3 +1,6 @@
+.slider_wrapper{
+  width: 100vw;
+}
 .slider_wrapper:before,
 .slider_wrapper .arrow,
 .slider_wrapper .slider_view,
