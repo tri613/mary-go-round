@@ -31,7 +31,6 @@
                 slides[i].style.margin = "0 " + options.margin + 'px';
                 slides[i].addEventListener('touchstart',function(e){
                     var startX = e.changedTouches[0].clientX;
-                    var self = this;
                     self.addEventListener('touchmove',function(e){
                         self.addEventListener('touchend',function(e){
                             var endX = e.changedTouches[0].clientX;
@@ -44,10 +43,8 @@
 
             slideOffset = _slideWidth+(options.margin*2);
             viewport.style.width = slideOffset*_showNum + 'px';
-            setTimeout(function(){
-                wrapper.style.height = slides[0].offsetHeight + 'px';
-                handler = doslide();
-            },300);
+            wrapper.style.height = slides[0].offsetHeight + 'px';
+            handler = doslide();
 
             //add listner
             for(var i=0;i<arrows.length;i++){
@@ -56,7 +53,17 @@
                     handler(d);
                 });
             }
-        }();
+        };
+
+        var loaded = 0;
+        for(var i=0;i<slides.length;i++){
+            slides[i].querySelector('img').onload = (function(e){
+                loaded ++;
+                if(loaded == slides.length){ //init when images are loaded
+                    init();
+                }
+            });
+        }
 
     };
 
@@ -64,7 +71,6 @@
         var offset = (options.slideAll) ? slideOffset*showNum*-1 : slideOffset * -1,
             len = (options.slideAll) ? Math.ceil(slider.offsetWidth / offset * -1) : Math.ceil(slider.offsetWidth / offset * -1) - showNum + 1,
             group = 0;
-
 
         return function(d){
             group += d;
