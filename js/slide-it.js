@@ -24,6 +24,7 @@
             arrows = wrapper.querySelectorAll('.arrow');
 
         var init = function(){
+            wrapper.classList.add('.slider_wrapper'); //for css style
             var handler;
             //set style for elements
             for(var i=0;i<slides.length;i++){
