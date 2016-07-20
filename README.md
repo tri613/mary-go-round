@@ -11,5 +11,6 @@ slideit(
   {
     margin:_MARGIN,
     slideAll: boolean
-  });
+  }
+);
 ```
